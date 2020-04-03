@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel.Channels;
-using System.Web;
 using System.Web.Mvc;
 using MyProject.BusinessLogic;
-using MyProject.BusinessLogic.Core;
-using MyProject.BusinessLogic.Interfaces;
 using MyProject.Models;
 using MyProject.Domain.Entities.User;
 using ISession = MyProject.BusinessLogic.Interfaces.ISession;
