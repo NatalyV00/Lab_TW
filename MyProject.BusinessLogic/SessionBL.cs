@@ -14,9 +14,6 @@ namespace MyProject.BusinessLogic
             return UserLoginAction(data);
         }
 
-        private ULoginResp UserLoginAction(ULoginData data)
-        {
-            throw new NotImplementedException();
-        }
+   
     }
 }

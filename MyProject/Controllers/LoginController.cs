@@ -21,14 +21,14 @@ namespace MyProject.Controllers
         {
 
             return View();
-        }
+       }
 
 
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(UserLogin login)
+        public ActionResult Index(UserLogin login) //login = {UserLogin}
         {
             if (ModelState.IsValid)
             {
