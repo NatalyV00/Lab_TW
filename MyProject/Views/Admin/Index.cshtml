@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+@model MyProject.Models.Products
+@{
+    Layout = "~/Views/Shared/_Layout_Blank.cshtml";
+    ViewBag.Title = "Admin";
+}
+<div class="content">
+    <div class="float-left"style="margin-top: 100px; margin-left: 200px;">
+        <h1>Admin</h1>
+        <ul id="update-products">
+            <li>
+                <div><div class="item">Product ID</div><span></span></div>
+                <div><div class="item">Name</div> <input type="text" /></div>
+                <div><div class="item">Description</div> <input type="text" /></div>
+                <div><div class="item">Price ($)</div> <input type="text" /></div>
+                <div><div class="item">Image</div> <input type="image" /></div>
+                <div>
+                    <input type="button" value="Update" />
+                    <input type="button" value="Delete Item" />
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="float-right"style="    margin-top: 100px;margin-right: 400px;" >
+        <h2>Add New Product</h2>
+        <form id="product">
+            @Html.ValidationSummary(true)
+            <fieldset>
+                <legend>Contact</legend>
+                @Html.EditorForModel()
+                <p>
+                    <input type="submit" value="Save" />
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+

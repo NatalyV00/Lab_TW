@@ -1,5 +1,4 @@
-﻿
-a {
+﻿a {
     color: black;
 }
 
@@ -10,7 +9,7 @@ a {
 }
 
 .body-bg {
-   // background: url('themes/base/images/bg_3.jpg');
+    // background: url('themes/base/images/bg_3.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

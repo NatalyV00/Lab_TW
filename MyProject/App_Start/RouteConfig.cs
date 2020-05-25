@@ -17,6 +17,22 @@ namespace MyProject
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+
+            );
+            routes.MapRoute(
+                name: "Admin",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Login",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Signup",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Register", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

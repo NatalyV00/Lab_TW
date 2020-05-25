@@ -1,62 +1,73 @@
-﻿@model MyProject.Models.UserLogin
-@using System.Web.Optimization
-@{
-    ViewBag.Title = "Login";
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
 }
-<div class="text-center body-bg">
-    <h1> Login to your account </h1>
-    <form style="margin-bottom:200px;">
-    @Html.ValidationSummary(true)
-   @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @id = "LoginForm" }))
-    {
-    @Html.AntiForgeryToken()
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Credential, new { @class = "control-label" })
-        @Html.TextBoxFor(m => m.Credential, new
-        {
-        placeholder = "username",
-        title = "",
-        value = "",
-        id = "username",
-        @class = "form-control"
-        })
+@using System.Web.Optimization
+@model MyProject.Models.UserLogin
+
+<div class="text-center body-bg">
+    <div class="view-header">
+        <div class="header-icon">
+        </div>
+        <div class="header-title">
+            <h1>Login to your account</h1>
+        </div>
     </div>
-                
-    <div class="form-group">
-         @Html.LabelFor(m => m.Password, new { @class = "control-label" })
-         @Html.TextBoxFor(m => m.Password, new
+
+    <div class="panel panel-filled">
+        <div class="panel-body">
+            @Html.ValidationSummary(true)
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @id = "LoginForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Credential, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Credential, new
+               {
+                   placeholder = "username",
+                   title = "Please enter you username",
+                   value = "",
+                   name = "username",
+                   id = "username",
+                   @class = "form-control"
+               })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Password, new
                {
                    @class = "form-control",
                    type = "password",
-                   title = "",
-                   placeholder = "password",
+                   title = "Please enter your password",
+                   placeholder = "******",
                    value = "",
                    name = "password",
-                   id = "password",
-
+                   id = "password"
                })
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            }
+        </div>
+    </div>
 
-    </div>
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    }
-    </form>
 </div>
 
-     @section Scripts {      @Scripts.Render("~/bundles/validation/js")
 
-         <script type="text/javascript">
-         $(function () {
+
+@section Scripts {
+    @Scripts.Render("~/bundles/validation/js")
+
+    <script type="text/javascript">
+        $(function () {
+
             $("#LoginForm").validate({
                 rules: {
                     Username: {
                         required: true
-                        },
+                    },
                     Password: {
                         required: true
                     }
@@ -72,8 +83,8 @@
                 },
                 errorElement: "span"
             });
-         });
-            </script>
-   }
+        });
 
 
+    </script>
+}
