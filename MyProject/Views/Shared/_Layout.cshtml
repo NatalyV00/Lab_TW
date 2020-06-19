@@ -7,15 +7,23 @@
     <title>@ViewBag.Title - Sweet Bounquet</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/themes/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/slicknav.min.css" type="text/css">
+    <!-- Google Font -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+   
 
     @Styles.Render("~/bundles/font-awesome/css")
     @Styles.Render("~/bundles/animate/css")
     @Styles.Render("~/bundles/bootstrap/css")
 
-  <!--Add local styles, mostly for plugins css file-->
+    <!--Add local styles, mostly for plugins css file-->
     @if (IsSectionDefined("Styles"))
     {
-        @RenderSection("Styles",required:false)
+        @RenderSection("Styles", required: false)
     }
 
     <!--Primary HOME style-->

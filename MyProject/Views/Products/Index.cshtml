@@ -5,42 +5,147 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+<!-- Featured Section Begin -->
+<section class="featured spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Featured Product</h2>
+                </div>
+                <div class="featured__controls">
+                    <ul>
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".fruits">Fruits</li>
+                        <li data-filter=".nuts">Nuts</li>
+                        <li data-filter=".marshmallows">Marshmallows</li>
+                        <li data-filter=".berries">Berries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix nuts">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_7.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Boquet of Nuts</a></h6>
+                        <h5>$3.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix berries">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_8.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart "></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Strawberry</a></h6>
+                        <h5>$3.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix marshmallows">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_9.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Marshmallows</a></h6>
+                        <h5>$2.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fruits">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_10.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Oranges</a></h6>
+                        <h5>$3.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix berries ">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_11.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Сherries</a></h6>
+                        <h5>$2.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix *">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_12.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Donuts</a></h6>
+                        <h5>$3.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fruits berries">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_13.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Apples and Cherries</a></h6>
+                        <h5>$3.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fruits ">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" data-setbg="">
+                        <img src="~/Content/themes/base/images/bucket_14.jpg" />
+                        <ul class="featured__item__pic__hover">
+                            <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="#">Bonquet of Dried Fruits</a></h6>
+                        <h5>$3.00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured Section End -->
